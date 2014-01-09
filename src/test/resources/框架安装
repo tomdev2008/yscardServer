@@ -1,0 +1,9 @@
+1.拷贝pom.xml 和 src 文件夹下面的文件到 项目目录
+2.下载maven项目管理工具，apache-mavem-3.xxx
+3.配置jdk环境变量
+4.配置maven 命令的 mvn环境变量
+5.生成工程  mvn eclipse:eclipse
+6.在mysql中 ipicstory
+7.打包命令  mvn package
+8.打开memcache客户端
+9.丢tomcat 启动
