@@ -30,11 +30,7 @@ public class ResponseJSONController {
 	
 	@Autowired
 	private Cache me;
-	
-	
 	static String userIP = "127.0.0.1";
-	
-	
 	
 	@RequestMapping(value="/commens",produces=MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody Commentlist getContactsInJSON(){
