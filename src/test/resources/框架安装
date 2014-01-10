@@ -7,3 +7,5 @@
 7.打包命令  mvn package
 8.打开memcache客户端
 9.丢tomcat 启动
+
+git  clone  git://github.com/iamtowne/yscardServer.git   yscardServer
