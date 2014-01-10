@@ -17,42 +17,42 @@ import com.yscard.framework.jdbcrepository.reps.UserRepository;
 @EnableTransactionManagement
 @Configuration
 public class JdbcRepositoryConfig {
-	
-	public static final int MYSQL_PORT = 3000;
 
 	@SuppressWarnings("static-access")
-	public @Bean DataSource dataSource() throws Exception {
+	public @Bean
+	DataSource dataSource() throws Exception {
 		Properties prop = new Properties();
-        prop.load(JdbcRepositoryConfig.class.getClassLoader().getResourceAsStream("jdbc.properties"));  
-		 //建立数据工厂  
-		DataSource myDataSource = BasicDataSourceFactory.createDataSource(prop); 
-	    BasicDataSourceFactory dataSourceFactory =  new BasicDataSourceFactory(); 
-	    myDataSource = dataSourceFactory.createDataSource(prop);  
+		prop.load(JdbcRepositoryConfig.class.getClassLoader()
+				.getResourceAsStream("jdbc.properties"));
+		// 建立数据工厂
+		DataSource myDataSource = BasicDataSourceFactory.createDataSource(prop);
+		BasicDataSourceFactory dataSourceFactory = new BasicDataSourceFactory();
+		myDataSource = dataSourceFactory.createDataSource(prop);
 		return myDataSource;
 	}
 
-	
-	public @Bean CommentRepository commentRepository() {
+	public @Bean
+	CommentRepository commentRepository() {
 		return new CommentRepository();
 	}
 
-	
-	public @Bean UserRepository userRepository() {
+	public @Bean
+	UserRepository userRepository() {
 		return new UserRepository();
 	}
 
-	
-	public @Bean BoardingPassRepository boardingPassRepository() {
+	public @Bean
+	BoardingPassRepository boardingPassRepository() {
 		return new BoardingPassRepository();
 	}
 
-	
-	public @Bean CommentWithUserRepository commentWithUserRepository() {
+	public @Bean
+	CommentWithUserRepository commentWithUserRepository() {
 		return new CommentWithUserRepository();
 	}
 
-	
-	public @Bean PlatformTransactionManager transactionManager() throws Exception {
+	public @Bean
+	PlatformTransactionManager transactionManager() throws Exception {
 		return new DataSourceTransactionManager(dataSource());
 	}
 }
