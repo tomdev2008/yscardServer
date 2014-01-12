@@ -8,5 +8,6 @@
 8.打包命令  mvn package
 9.打开memcache客户端
 10.丢tomcat 启动
+11.开启informix 事务
 
 git  clone  git://github.com/iamtowne/yscardServer.git   yscardServer

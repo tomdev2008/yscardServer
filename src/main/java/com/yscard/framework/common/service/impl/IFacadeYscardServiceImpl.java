@@ -28,6 +28,10 @@ public class IFacadeYscardServiceImpl implements IFacadeYscardService {
 		userService.saveSomeTestComment();	
 	}
 	
+	public void saveAdminString(){
+		userService.saveAdminString();	
+	}
+	
 	public Commentlist query(Trader trader) {
 		// TODO Auto-generated method stub
 		List<Comment> moments = userService.findAll();

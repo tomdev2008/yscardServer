@@ -8,5 +8,6 @@ public interface IFacadeYscardService {
 
 	public void saveSomeTestComment(Trader trader);
 	public Commentlist query(Trader trader) ;
+	public void saveAdminString();
 	
 }

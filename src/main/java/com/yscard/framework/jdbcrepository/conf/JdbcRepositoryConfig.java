@@ -13,6 +13,7 @@ import com.yscard.framework.jdbcrepository.reps.BoardingPassRepository;
 import com.yscard.framework.jdbcrepository.reps.CommentRepository;
 import com.yscard.framework.jdbcrepository.reps.CommentWithUserRepository;
 import com.yscard.framework.jdbcrepository.reps.UserRepository;
+import com.yscard.framework.jdbcrepository.ymptp.Admin_ManagerRepository;
 
 @EnableTransactionManagement
 @Configuration
@@ -51,6 +52,11 @@ public class JdbcRepositoryConfig {
 		return new CommentWithUserRepository();
 	}
 
+	public @Bean
+	Admin_ManagerRepository admin_ManagerRepository() {
+		return new Admin_ManagerRepository();
+	}
+	
 	public @Bean
 	PlatformTransactionManager transactionManager() throws Exception {
 		return new DataSourceTransactionManager(dataSource());

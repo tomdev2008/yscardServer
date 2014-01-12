@@ -8,4 +8,6 @@ public interface UserYscardService {
 	
 	public java.util.List<Comment> findAll();
 	
+	public void saveAdminString();
+	
 }

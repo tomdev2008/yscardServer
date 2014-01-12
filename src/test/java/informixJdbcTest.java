@@ -18,17 +18,31 @@ import com.yscard.framework.jdbcrepository.reps.Comment;
 import com.yscard.framework.jdbcrepository.reps.CommentRepository;
 import com.yscard.framework.jdbcrepository.reps.User;
 import com.yscard.framework.jdbcrepository.reps.UserRepository;
+import com.yscard.framework.jdbcrepository.ymptp.Admin_Manager;
+import com.yscard.framework.jdbcrepository.ymptp.Admin_ManagerRepository;
 import com.yscard.framework.service.UserYscardService;
 
 @ContextConfiguration(locations = "classpath:applicationContext.xml")
 @RunWith(value = SpringJUnit4ClassRunner.class)
 public class informixJdbcTest {
 
-	@Resource(name = "userYscardService")
-	UserYscardService userService;
-	
+//	@Resource(name = "userYscardService")
+//	UserYscardService userService;
+//	
 	@Resource(name = "ifacadeYscardService")
 	IFacadeYscardService ifacadeservice;
+	
+	@Test
+	public void  test1234()
+	{
+//		System.out.println(adminresitory);
+//		Admin_Manager adminmanager =  new Admin_Manager("1", "1", 1, "1", "1", "1");
+//		adminresitory.save(adminmanager);
+		
+		Trader trader = new Trader();
+		ifacadeservice.saveAdminString();
+		
+	}
 
 	// @Before
 	// public void setup() {
@@ -50,17 +64,17 @@ public class informixJdbcTest {
 	// }
 	
 //	@Test
-	public void shouldGenerateSubsequentIds() {
-		Trader trader = new Trader();
-		ifacadeservice.saveSomeTestComment(trader);
-	}
-	
-	@Test
-	public void findAllComment(){
-		Trader trader = new Trader();
-		System.out.println(ifacadeservice.query(trader));
-	}
-	//
+//	public void shouldGenerateSubsequentIds() {
+//		Trader trader = new Trader();
+//		ifacadeservice.saveSomeTestComment(trader);
+//	}
+//	
+//	@Test
+//	public void findAllComment(){
+//		Trader trader = new Trader();
+//		System.out.println(ifacadeservice.query(trader));
+//	}
+//	//
 	// @Test
 	// public void shouldUpdateCommentByGeneratedId() throws Exception {
 	// //given
